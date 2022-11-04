@@ -12,6 +12,17 @@ This implimentation is based on [yolov5](https://github.com/ultralytics/yolov5).
 
 [code](./seg)
 
+To convert yolov7-seg.pt into onnx & .trt format 
+
+```
+python3 export.py --weights yolov7-seg.pt --include torchscript onnx openvino engine coreml tflite
+```
+inference 
+
+```
+!python3 segment/predict.py --weights yolov7-seg.onnx --source "spiderman2.mp4" --project segmentop
+```
+
 ## Image classification
 
 [code](./det)
